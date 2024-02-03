@@ -1,24 +1,8 @@
 import React from 'react';
 import './FlavanoidsTable.css';
-
 import data from '../Wine-Data.json'
 
-const calculateMean = (array) => array.reduce((acc, val) => acc + val, 0) / array.length || 0
-
-const calculateMedian = (array) => {
-  const sortedArray = array.slice().sort((a, b) => a - b);
-  const middle = Math.floor(sortedArray.length / 2);
-  return sortedArray.length % 2 === 0 ? (sortedArray[middle - 1] + sortedArray[middle]) / 2 : sortedArray[middle];
-};
-
-const calculateMode = (array) => {
-  const frequencyMap = {};
-  array.forEach((value) => {
-    frequencyMap[value] = (frequencyMap[value] || 0) + 1;
-  });
-  const mode = Object.keys(frequencyMap).reduce((a, b) => frequencyMap[a] > frequencyMap[b] ? a : b);
-  return parseFloat(mode);
-};
+import { calculateMean, calculateMedian, calculateMode } from '../utils/calculations'
 
 const FlavanoidsTable = () => {
   const properties = ['Mean', 'Median', 'Mode'];
