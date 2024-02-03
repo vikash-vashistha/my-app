@@ -1,0 +1,23 @@
+/* FlavanoidsTable.css */
+
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flavanoids-table {
+  border-collapse: collapse;
+  width: 70%;
+  margin-top: 20px;
+}
+
+.flavanoids-table th,
+.flavanoids-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.flavanoids-table th {
+  background-color: #f2f2f2;
+}
