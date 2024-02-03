@@ -13,4 +13,4 @@ This is a React application for analyzing wine data, displaying tables for Flava
   yarn install
 
   yarn start
-![My-App](/img2.png)
+![My-App](/avc.png)
