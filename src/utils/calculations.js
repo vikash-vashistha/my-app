@@ -1,4 +1,4 @@
-export const calculateMean = (array) => array.reduce((acc, val) => acc + val, 0) / array.length || 0
+export const calculateMean = (array) => array.reduce((acc, val) => acc + val, 0) / array.length;
 
 export const calculateMedian = (array) => {
   const sortedArray = array.slice().sort((a, b) => a - b);

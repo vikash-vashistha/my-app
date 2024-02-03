@@ -12,9 +12,9 @@ const FlavanoidsTable = () => {
     const propertyValues = alcoholClasses.map((alcoholClass) => {
       const flavanoidsValues = data
         .filter(item => item["Alcohol"] === alcoholClass)
-        .map(item => item['Flavanoids']);
+        .map(item => Number(item['Flavanoids']));
 
-      switch (property) {
+        switch (property) {
         case 'Mean':
           return calculateMean(flavanoidsValues).toFixed(3);
         case 'Median':
@@ -43,7 +43,7 @@ const FlavanoidsTable = () => {
         <tbody>
           {tableData.map((row, index) => (
             <tr key={index}>
-              <td>{row.property}</td>
+              <td>{`Flavanoids ${row.property}`}</td>
               {row.values.map((value, index) => (
                 <td key={index}>{value}</td>
               ))}
